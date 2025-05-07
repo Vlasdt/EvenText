@@ -65,15 +65,15 @@ namespace EvenText
                 BigInteger sMod = (s % n + n) % n;
 
                 if (r != sMod)
-                    return "число составное";
+                    return $"{n} составное";
             }
 
-            return "n вероятно простое";
+            return $"{n} вероятно простое: {1 - 1/Math.Pow(2,k)}";
         }
 
         static void Main(string[] args)//Факторизация 41⋅184829⋅460429974611
         {
-            Console.WriteLine(EvenTest(3489133282872437279, 1));
+            Console.WriteLine(EvenTest(7,20));
             Console.ReadKey();
         }
     }
